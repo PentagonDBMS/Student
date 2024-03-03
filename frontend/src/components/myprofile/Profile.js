@@ -77,7 +77,7 @@ const Profile = () => {
           headers: { "Content-Type": "application/json" },
           credentials: "include",
           body: JSON.stringify({
-            studentid: userData.students_or_externals_id,
+            studentid: currentUser.students_or_externals_id,
             oldPassword,
             newPassword,
           }),
