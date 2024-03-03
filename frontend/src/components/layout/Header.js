@@ -79,9 +79,9 @@ const StudentHeader = () => {
             </Dropdown.Menu>
           </Dropdown>
         )}
-        <Menu.Item as={Link} to="/dashboard">
+        <Menu.Item as={Link} to="https://pentagondbms.github.io/UniveristyFest/">
           <Image
-            src="https://react.semantic-ui.com/logo.png"
+            src={logo}
             alt="logo"
             size="mini"
             style={{ marginRight: "1.5em" }}
