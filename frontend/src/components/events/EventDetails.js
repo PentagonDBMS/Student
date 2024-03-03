@@ -217,22 +217,42 @@ export default function () {
               </Button>
             ) : (
               <Button fluid>
-                <Icon name="check" />
-                Already Volunteered
+                <Icon name="handshake" />
+                Volunteering for this event
               </Button>
             )
           ) : (
-            <ButtonGroup fluid>
-              <Button positive onClick={() => setOpenParticipateModal(true)}>
-                <Icon name="check" />
-                Register
+            currentUser.isstudent ? (
+              <>
+                  <ButtonGroup fluid>
+                      <Button onClick={() => setOpenVolunteerModal(true)}>
+                          <Icon name="handshake" />
+                          Volunteer
+                      </Button>
+                      <ButtonOr />
+                      <Button positive onClick={() => setOpenParticipateModal(true)}>
+                          <Icon name="check" />
+                          Register
+                      </Button>
+                  </ButtonGroup>
+              </>
+          ) : (
+              <Button positive fluid onClick={() => setOpenParticipateModal(true)}>
+                  <Icon name="check" />
+                  Register
               </Button>
-              <ButtonOr />
-              <Button onClick={() => setOpenVolunteerModal(true)}>
-                <Icon name="check" />
-                Volunteer
-              </Button>
-            </ButtonGroup>
+          )
+            // <ButtonGroup fluid>
+            //   <Button positive onClick={() => setOpenParticipateModal(true)}>
+            //     <Icon name="check" />
+            //     Register
+            //   </Button>
+            //   <ButtonOr />
+            //   <Button onClick={() => setOpenVolunteerModal(true)}>
+            //     <Icon name="check" />
+            //     Volunteer
+            //   </Button>
+            // </ButtonGroup>
           )}
         </Card.Content>
       </Card>
