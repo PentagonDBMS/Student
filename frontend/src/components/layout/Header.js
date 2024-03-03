@@ -3,7 +3,7 @@ import { Container, Menu, Icon, Dropdown, Image } from "semantic-ui-react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 import { useScreenSize } from "../../contexts/ScreenSizeContext"; // Assuming this is implemented
-import logo from "../../images/fest-removebg.png";
+import logo from "../../images/logo.png";
 import studentImage from "../../images/student.png";
 import externlImage from "../../images/formalman.png";
 
